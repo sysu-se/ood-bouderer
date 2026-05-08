@@ -1,6 +1,7 @@
 <script>
 	import Timer from './Timer.svelte';
 	import Actions from './Actions.svelte';
+	import ExploreActions from './ExploreActions.svelte';
 </script>
 
 <div class="action-bar space-y-3 xs:space-y-0">
@@ -8,6 +9,8 @@
 
 	<Actions />
 </div>
+
+<ExploreActions />
 
 <style>
 	.action-bar {

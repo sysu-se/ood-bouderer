@@ -1,5 +1,5 @@
 <script>
-	import { userGrid } from '@sudoku/stores/grid';
+	import { gameSession } from '@sudoku/stores/gameSession';
 	import { cursor } from '@sudoku/stores/cursor';
 	import { notes } from '@sudoku/stores/notes';
 	import { candidates } from '@sudoku/stores/candidates';
@@ -15,13 +15,13 @@
 				} else {
 					candidates.add($cursor, num);
 				}
-				userGrid.set($cursor, 0);
+				gameSession.set($cursor, 0);
 			} else {
 				if ($candidates.hasOwnProperty($cursor.x + ',' + $cursor.y)) {
 					candidates.clear($cursor);
 				}
 
-				userGrid.set($cursor, num);
+				gameSession.set($cursor, num);
 			}
 		}
 	}
